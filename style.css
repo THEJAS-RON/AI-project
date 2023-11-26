@@ -1,0 +1,78 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 20px;
+    justify-content: center;
+    align-items: center;
+}
+h1,h3{
+    margin: 10px 0px;
+}
+.suduko-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+#suduko-box div{
+    display:flex;
+    flex-direction: row;
+}
+#row1,#row2,#row3{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+#grid-row1,#grid-row2,#grid-row3{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+textarea{
+    resize: none;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    /* position: relative;
+    top: 0px;
+    left: 0px; */
+}
+
+
+
+/* utility classes */
+.h-primary{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 31px;
+}
+.h-secondary{
+    font-size: 20px;
+}
+.center{
+    text-align: center;
+
+}
+#row1,#row2,#row3{
+    padding: 0px;
+    margin: 0px;
+}
+#col1,#col2,#col3{
+    border: 1.5px solid black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container button{
+    margin: 20px 0px;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Suduko Solver</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h-primary center">SUDOKU SOLVER</h1>
+        <h3 class="h-secondary center">9x9 Suduko</h3>
+        <div id="suduko-grid" class="suduko-box">
+            <div id="row1">
+                <div id="col1">
+                    <div id="grid-row1">
+                        <textarea id="box11" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box12" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box13" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box21" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box22" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box23" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box31" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box32" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box33" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col2">
+                    <div id="grid-row1">
+                        <textarea id="box14" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box15" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box16" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box24" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box25" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box26" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box34" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box35" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box36" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col3">
+                    <div id="grid-row1">
+                        <textarea id="box17" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box18" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box19" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box27" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box28" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box29" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box37" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box38" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box39" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="row2">
+                <div id="col1">
+                    <div id="grid-row1">
+                        <textarea id="box41" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box42" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box43" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box51" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box52" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box53" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box61" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box62" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box63" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col2">
+                    <div id="grid-row1">
+                        <textarea id="box44" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box45" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box46" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box54" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box55" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box56" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box64" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box65" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box66" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col3">
+                    <div id="grid-row1">
+                        <textarea id="box47" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box48" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box49" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box57" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box58" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box59" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box67" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box68" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box69" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="row3">
+                <div id="col1">
+                    <div id="grid-row1">
+                        <textarea id="box71" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box72" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box73" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box81" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box82" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box83" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box91" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box92" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box93" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col2">
+                    <div id="grid-row1">
+                        <textarea id="box74" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box75" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box76" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box84" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box85" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box86" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box94" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box95" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box96" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+                <div id="col3">
+                    <div id="grid-row1">
+                        <textarea id="box77" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box78" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box79" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row2">
+                        <textarea id="box87" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box88" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box89" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                    <div id="grid-row3">
+                        <textarea id="box97" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box98" cols="1" rows="1" maxlength="1"></textarea>
+                        <textarea id="box99" cols="1" rows="1" maxlength="1"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="btn" class="btn btn-primary">Solve</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
